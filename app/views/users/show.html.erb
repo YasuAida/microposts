@@ -2,3 +2,32 @@
   <%= gravatar_for @user %>
   <%= @user.name %>
 </h1>
+
+<div class="container-fluid">
+  <div class="row">
+    <%= form_for(@user, html: {class: "form-horizontal" }) do |f| %>
+    
+      <div class="form-group">
+        <%= f.label :profile, class: "col-sm-3" %>
+        <div class="col-sm-9">
+          <%= f.text_area :profile, class: "form-control"%>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :email_address, class: "col-sm-3" %>
+        <div class="col-sm-9">
+          <%= f.email_field :email_address, class: "form-control"%>
+        </div>
+      </div>
+      
+      <div class="form-group">      
+        <%= f.label :region, class: "col-sm-3" %>
+        <div class="col-sm-9">
+          <%= f.text_field :region, class: "form-control"%>
+        </div>
+      </div>
+      
+    <% end %>
+  </div>  
+</div>
