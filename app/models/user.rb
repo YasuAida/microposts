@@ -8,10 +8,6 @@ class User < ActiveRecord::Base
     validates :profile,
               length: { maximum: 400 },
               :on => [ :update ]
-    validates :email_address,
-              length: { maximum: 255 },
-              format: { with: VALID_EMAIL_REGEX },
-              :on => [ :update ]
     validates :region,
               length: { maximum: 50 },
               :on => [ :update ]
