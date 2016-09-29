@@ -11,5 +11,8 @@ class User < ActiveRecord::Base
     validates :region,
               length: { maximum: 50 },
               :on => [ :update ]
+              
     has_secure_password
+    
+    has_many :microposts
 end
