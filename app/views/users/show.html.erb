@@ -6,8 +6,13 @@
         <%= @user.name %>
       </h1>
     </section>
+    <p>
+      <span>プロフィール:</span><%= @user.profile %></p>
+      <span>地域:</span><%= @user.region %>
+    </p>
     <%= render 'user_info' %>
   </aside>
+
   <div class="col-md-8">
     <%= render 'follow_form' if logged_in? %>
     <% if @user.microposts.any? %>
